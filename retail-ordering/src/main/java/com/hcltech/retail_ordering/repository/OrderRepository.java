@@ -1,0 +1,11 @@
+package com.hcltech.retail_ordering.repository;
+
+import com.hcltech.retail_ordering.entity.Order;
+import com.hcltech.retail_ordering.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface OrderRepository extends JpaRepository<Order, Long> {
+    List<Order> findByUser(User user);
+}
